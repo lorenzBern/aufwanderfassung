@@ -1,2 +1,8 @@
 cost-server/target
 .idea
+/cost-server/.project
+/cost-server/.externalToolBuilders
+/cost-server/.settings
+/cost-server/.classpath
+/cost-server/.idea
+/cost-server/restserver.iml
