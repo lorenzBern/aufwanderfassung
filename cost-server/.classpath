@@ -11,21 +11,9 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
-		<attributes>
-			<attribute name="optional" value="true"/>
-			<attribute name="maven.pomderived" value="true"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="/opt/dev/eclipse-juno/plugins/com.google.appengine.eclipse.sdkbundle_1.7.7.1/appengine-java-sdk-1.7.7.1/lib/shared/servlet-api.jar">
@@ -141,6 +129,12 @@
 	<classpathentry kind="lib" path="/opt/dev/eclipse-juno/plugins/com.google.appengine.eclipse.sdkbundle_1.7.7.1/appengine-java-sdk-1.7.7.1/lib/user/appengine-api-1.0-sdk-1.7.7.1.jar" sourcepath="/opt/dev/eclipse-juno/plugins/com.google.appengine.eclipse.sdkbundle_1.7.7.1/appengine-java-sdk-1.7.7.1/src/user/appengine-api-1.0-sdk-1.7.7.1-src.zip">
 		<attributes>
 			<attribute name="javadoc_location" value="file:/opt/dev/eclipse-juno/plugins/com.google.appengine.eclipse.sdkbundle_1.7.7.1/appengine-java-sdk-1.7.7.1/docs/javadoc/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>

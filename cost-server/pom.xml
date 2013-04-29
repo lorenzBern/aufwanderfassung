@@ -5,7 +5,7 @@
 
 	<!-- The Basics -->
 	<groupId>com.unisys.ch.jax</groupId>
-	<artifactId>restserver</artifactId>
+	<artifactId>cost-server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 
