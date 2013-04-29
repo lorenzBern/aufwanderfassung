@@ -5,4 +5,4 @@ cost-server/target
 /cost-server/.settings
 /cost-server/.classpath
 /cost-server/.idea
-/cost-server/restserver.iml
+/cost-server/cost-server.iml
