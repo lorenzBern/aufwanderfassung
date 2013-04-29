@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>restserver</name>
+	<name>cost-server</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -46,11 +46,6 @@
 			</arguments>
 		</buildCommand>
 		<buildCommand>
-			<name>com.google.appengine.eclipse.core.enhancerbuilder</name>
-			<arguments>
-			</arguments>
-		</buildCommand>
-		<buildCommand>
 			<name>org.eclipse.ui.externaltools.ExternalToolBuilder</name>
 			<triggers>full,incremental,</triggers>
 			<arguments>
@@ -62,6 +57,11 @@
 		</buildCommand>
 		<buildCommand>
 			<name>com.google.appengine.eclipse.core.projectValidator</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>com.google.appengine.eclipse.core.enhancerbuilder</name>
 			<arguments>
 			</arguments>
 		</buildCommand>
