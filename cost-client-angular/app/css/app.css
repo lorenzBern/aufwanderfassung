@@ -1,13 +1,24 @@
 /* app css stylesheet */
 body {
-    padding: 10px;
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+h1 {
+    font-size: 40px;
+    letter-spacing: -2px;
+    line-height: 1;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.actionbar {
+    height:50px;
 }
 
 .grid {
-    margin-top: 30px;
     border: 1px solid rgb(212,212,212);
-    width: 600px;
-    height: 300px;
-    position: fixed;
+    width: 100%;
+    height: 500px;
 }
 
