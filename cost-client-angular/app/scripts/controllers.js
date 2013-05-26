@@ -4,7 +4,7 @@
 
 function CostListCtrl($scope, $http) {
     $scope.filterOptions = {
-        filterText: "",
+        filterText: '',
         useExternalFilter: true
     };
     $scope.pagingOptions = {
