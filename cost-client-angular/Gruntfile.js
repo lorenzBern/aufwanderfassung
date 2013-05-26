@@ -266,13 +266,6 @@ module.exports = function (grunt) {
               '*.{ico,txt}',
               '.htaccess',
               'data/*',
-              'components/jquery/jquery.js',
-              'components/bootstrap/docs/assets/js/bootstrap.js',
-              'components/bootstrap/docs/assets/css/bootstrap.css',
-              'components/bootstrap/docs/assets/css/bootstrap-responsive.css',
-              'components/angular/angular.js',
-              'components/angular-grid/build/ng-grid.js',
-              'components/angular-grid/ng-grid.css',
               'images/{,*/}*.{gif,webp}',
               'styles/fonts/*'
             ]
