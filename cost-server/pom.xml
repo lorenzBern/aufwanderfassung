@@ -18,7 +18,7 @@
 		<downloadSources>true</downloadSources>
 
 		<gae.version>1.7.7</gae.version>
-		<maven.gae.plugin.version>0.9.6</maven.gae.plugin.version>
+        <maven.gae.plugin.version>0.9.6</maven.gae.plugin.version>
 
 		<!-- Upload to http://test.latest.<applicationName>.appspot.com by default -->
 		<gae.application.version>test</gae.application.version>
@@ -27,7 +27,7 @@
 		<spring.version>3.2.2.RELEASE</spring.version>
 	</properties>
 
-	<name>unisys-jax</name>
+	<name>cost-server</name>
 
 	<dependencies>
 
@@ -39,7 +39,7 @@
 			<type>pom</type>
 		</dependency>
 
-		<!-- GAE libraries for local testing as described here: http://code.google.com/appengine/docs/java/howto/unittesting.html -->
+        <!-- GAE libraries for local testing as described here: http://code.google.com/appengine/docs/java/howto/unittesting.html -->
 		<dependency>
 			<groupId>com.google.appengine</groupId>
 			<artifactId>appengine-api-labs</artifactId>
@@ -58,7 +58,7 @@
 		<!-- <groupId>com.google.appengine</groupId> -->
 		<!-- <artifactId>appengine-testing</artifactId> -->
 		<!-- <version>${gae.version}</version> -->
-		<!-- <scope>test</scope> -->
+        <!-- <scope>test</scope> -->
 		<!-- </dependency> -->
 
 		<!-- Jackson JSON Mapper -->
@@ -91,11 +91,12 @@
 	</dependencies>
 
 	<build>
+
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
-				<version>2.1-beta-1</version>
+				<version>2.3</version>
 				<configuration>
 					<webResources>
 						<resource>
@@ -144,13 +145,14 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>2.0</version>
+				<version>2.5.1</version>
 				<configuration>
 					<source>1.6</source>
 					<target>1.6</target>
 				</configuration>
 			</plugin>
-		</plugins>
+
+        </plugins>
 	</build>
 
 	<profiles>
@@ -183,6 +185,13 @@
 				<gae.application.version>release</gae.application.version>
 			</properties>
 		</profile>
+
+        <profile>
+            <id>env-georg</id>
+            <properties>
+                <gae.home>C:\Users\Georg\.m2\repository\com\google\appengine\appengine-java-sdk\1.7.7\appengine-java-sdk-1.7.7\</gae.home>
+            </properties>
+        </profile>
 	</profiles>
 
 	<repositories>
