@@ -16,7 +16,8 @@ module.exports = function (grunt) {
 
   try {
     yeomanConfig.app = require('./bower.json').appPath || yeomanConfig.app;
-  } catch (e) {}
+  } catch (e) {
+  }
 
   grunt.initConfig({
     yeoman: yeomanConfig,
@@ -78,14 +79,16 @@ module.exports = function (grunt) {
     },
     clean: {
       dist: {
-        files: [{
-          dot: true,
-          src: [
-            '.tmp',
-            '<%= yeoman.dist %>/*',
-            '!<%= yeoman.dist %>/.git*'
-          ]
-        }]
+        files: [
+          {
+            dot: true,
+            src: [
+              '.tmp',
+              '<%= yeoman.dist %>/*',
+              '!<%= yeoman.dist %>/.git*'
+            ]
+          }
+        ]
       },
       server: '.tmp'
     },
@@ -106,22 +109,26 @@ module.exports = function (grunt) {
     },
     coffee: {
       dist: {
-        files: [{
-          expand: true,
-          cwd: '<%= yeoman.app %>/scripts',
-          src: '{,*/}*.coffee',
-          dest: '.tmp/scripts',
-          ext: '.js'
-        }]
+        files: [
+          {
+            expand: true,
+            cwd: '<%= yeoman.app %>/scripts',
+            src: '{,*/}*.coffee',
+            dest: '.tmp/scripts',
+            ext: '.js'
+          }
+        ]
       },
       test: {
-        files: [{
-          expand: true,
-          cwd: 'test/spec',
-          src: '{,*/}*.coffee',
-          dest: '.tmp/spec',
-          ext: '.js'
-        }]
+        files: [
+          {
+            expand: true,
+            cwd: 'test/spec',
+            src: '{,*/}*.coffee',
+            dest: '.tmp/spec',
+            ext: '.js'
+          }
+        ]
       }
     },
     compass: {
@@ -166,18 +173,20 @@ module.exports = function (grunt) {
     },
     imagemin: {
       dist: {
-        files: [{
-          expand: true,
-          cwd: '<%= yeoman.app %>/images',
-          src: '{,*/}*.{png,jpg,jpeg}',
-          dest: '<%= yeoman.dist %>/images'
-        }]
+        files: [
+          {
+            expand: true,
+            cwd: '<%= yeoman.app %>/images',
+            src: '{,*/}*.{png,jpg,jpeg}',
+            dest: '<%= yeoman.dist %>/images'
+          }
+        ]
       }
     },
     cssmin: {
       dist: {
         files: {
-          '<%= yeoman.dist %>/styles/main.css': [
+          '<%= yeoman.dist %>/styles/app.css': [
             '.tmp/styles/{,*/}*.css',
             '<%= yeoman.app %>/styles/{,*/}*.css'
           ]
@@ -188,21 +197,23 @@ module.exports = function (grunt) {
       dist: {
         options: {
           /*removeCommentsFromCDATA: true,
-          // https://github.com/yeoman/grunt-usemin/issues/44
-          //collapseWhitespace: true,
-          collapseBooleanAttributes: true,
-          removeAttributeQuotes: true,
-          removeRedundantAttributes: true,
-          useShortDoctype: true,
-          removeEmptyAttributes: true,
-          removeOptionalTags: true*/
+           // https://github.com/yeoman/grunt-usemin/issues/44
+           //collapseWhitespace: true,
+           collapseBooleanAttributes: true,
+           removeAttributeQuotes: true,
+           removeRedundantAttributes: true,
+           useShortDoctype: true,
+           removeEmptyAttributes: true,
+           removeOptionalTags: true*/
         },
-        files: [{
-          expand: true,
-          cwd: '<%= yeoman.app %>',
-          src: ['*.html', 'views/*.html'],
-          dest: '<%= yeoman.dist %>'
-        }]
+        files: [
+          {
+            expand: true,
+            cwd: '<%= yeoman.app %>',
+            src: ['*.html', 'views/*.html'],
+            dest: '<%= yeoman.dist %>'
+          }
+        ]
       }
     },
     cdnify: {
@@ -212,12 +223,14 @@ module.exports = function (grunt) {
     },
     ngmin: {
       dist: {
-        files: [{
-          expand: true,
-          cwd: '<%= yeoman.dist %>/scripts',
-          src: '*.js',
-          dest: '<%= yeoman.dist %>/scripts'
-        }]
+        files: [
+          {
+            expand: true,
+            cwd: '<%= yeoman.dist %>/scripts',
+            src: '*.js',
+            dest: '<%= yeoman.dist %>/scripts'
+          }
+        ]
       }
     },
     uglify: {
@@ -243,19 +256,27 @@ module.exports = function (grunt) {
     },
     copy: {
       dist: {
-        files: [{
-          expand: true,
-          dot: true,
-          cwd: '<%= yeoman.app %>',
-          dest: '<%= yeoman.dist %>',
-          src: [
-            '*.{ico,txt}',
-            '.htaccess',
-            'components/**/*',
-            'images/{,*/}*.{gif,webp}',
-            'styles/fonts/*'
-          ]
-        }]
+        files: [
+          {
+            expand: true,
+            dot: true,
+            cwd: '<%= yeoman.app %>',
+            dest: '<%= yeoman.dist %>',
+            src: [
+              '*.{ico,txt}',
+              '.htaccess',
+              'data',
+              'components/jquery/jquery.js',
+              'components/bootstrap/docs/assets/js/bootstrap.js',
+              'components/bootstrap/docs/assets/css/bootstrap.css',
+              'components/bootstrap/docs/assets/css/bootstrap-responsive.css',
+              'components/angular/angular.js',
+              'components/angular-grid/build/ng-grid.js',
+              'images/{,*/}*.{gif,webp}',
+              'styles/fonts/*'
+            ]
+          }
+        ]
       }
     }
   });
@@ -280,7 +301,7 @@ module.exports = function (grunt) {
     'karma'
   ]);
 
-  grunt.registerTask('build', [
+  grunt.registerTask('build_org', [
     'clean:dist',
     'jshint',
     'test',
@@ -293,6 +314,41 @@ module.exports = function (grunt) {
     'concat',
     'copy',
     'cdnify',
+    'ngmin',
+    'uglify',
+    'rev',
+    'usemin'
+  ]);
+
+  grunt.registerTask('build', [
+    'clean:dist',
+    'jshint',
+    'test',
+    'coffee',
+    'compass:dist',
+    'useminPrepare',
+    'imagemin',
+    'cssmin',
+    'htmlmin',
+    'concat',
+    'copy',
+    'ngmin',
+    'uglify',
+    'rev',
+    'usemin'
+  ]);
+
+  grunt.registerTask('build2', [
+    'clean:dist',
+    'jshint',
+    'coffee',
+    'compass:dist',
+    'useminPrepare',
+    'imagemin',
+    'cssmin',
+    'htmlmin',
+    'concat',
+    'copy',
     'ngmin',
     'uglify',
     'rev',
