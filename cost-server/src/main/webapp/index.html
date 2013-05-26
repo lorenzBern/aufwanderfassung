@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cost Server</title>
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+</head>
+<body style="padding-top: 60px;">
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container-fluid">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="brand" href="#">Cost Server</a>
+
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <h1>Cost Server API</h1>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th class="views-field views-field-title">
+                        Resource
+                    </th>
+                    <th class="views-field views-field-body">
+                        Description
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <a href="https://cost-server.appspot.com/costs" target="_blank">GET /costs</a>
+                    </td>
+                    <td>
+                        Returns the costs (pageable)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="https://cost-server.appspot.com/costs/10" target="_blank">GET /costs/{id}</a>
+                    </td>
+                    <td>
+                        Returns a specific cost
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="#">GET ...</a>
+                    </td>
+                    <td>
+                        ...
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

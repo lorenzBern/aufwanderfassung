@@ -3,7 +3,7 @@
          xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
          version="2.5">
-    <display-name>Spring Web MVC Application</display-name>
+    <display-name>Cost Server</display-name>
     <!-- Servlets-->
     <servlet>
         <servlet-name>mvc-dispatcher</servlet-name>
@@ -46,4 +46,8 @@
             <transport-guarantee>CONFIDENTIAL</transport-guarantee>
         </user-data-constraint>
     </security-constraint>
+    
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
 </web-app>
