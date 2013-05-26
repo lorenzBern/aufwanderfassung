@@ -9,21 +9,21 @@ public class Cost {
 	String description;
 	Calendar workDay;
 	Double time;
-	CostLocation costLocation;
+	Project project;
 
 	public Cost() {
 		super();
 	}
 
 	public Cost(Long id, String title, String description, Calendar workDay,
-			Double time, CostLocation costLocation) {
+			Double time, Project project) {
 		super();
 		this.id = id;
 		this.title = title;
 		this.description = description;
 		this.workDay = workDay;
 		this.time = time;
-		this.costLocation = costLocation;
+		this.project = project;
 	}
 
 	public Long getId() {
@@ -66,12 +66,12 @@ public class Cost {
 		this.time = time;
 	}
 
-	public CostLocation getCostLocation() {
-		return costLocation;
+	public Project getProject() {
+		return project;
 	}
 
-	public void setCostLocation(CostLocation costLocation) {
-		this.costLocation = costLocation;
+	public void setProject(Project project) {
+		this.project = project;
 	}
 
 }
