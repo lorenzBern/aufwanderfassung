@@ -1,77 +1,62 @@
-
 <!doctype html>
 <html lang="en" ng-app="costsApp">
-    <head>
-        <meta charset="utf-8">
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <title>Cost Client Angular</title>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Cost Client Angular</title>
 
-        <!-- CSS -->
-        <!-- build:css styles/app.css -->
-        <link rel="stylesheet" href="components/bootstrap/docs/assets/css/bootstrap.css"/>
-        <link rel="stylesheet" href="styles/app.css"/>
-        <link rel="stylesheet" href="components/bootstrap/docs/assets/css/bootstrap-responsive.css"/>
-        <link rel="stylesheet" href="components/angular-grid/ng-grid.css"/>
-        <!-- endbuild -->
+    <link rel="icon" type="image/ico" href="images/favicon.ico"/>
 
-        <!-- JavaScript -->
-        <!-- build:js scripts/scripts.js -->
-        <script src="components/jquery/jquery.js"></script>
-        <script src="components/bootstrap/docs/assets/js/bootstrap.js"></script>
-        <script src="components/angular/angular.js"></script>
-        <script src="components/angular-grid/build/ng-grid.js"></script>
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/CostList.js"></script>
-        <script src="scripts/controllers/CostDetail.js"></script>
-        <!-- endbuild -->
-    </head>
-    <body>
-            <!-- NAVIGATION -->
-            <div class="navbar navbar-inverse navbar-fixed-top">
-                <div class="navbar-inner">
-                    <div class="container">
-                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </a>
-                        <a class="brand" href="#">Aufwandserfassung</a>
-                        <div class="nav-collapse">
-                            <ul class="nav">
-                                <li class="active">
-                                    <a href="./index.html">Home</a>
-                                </li>
-                                <li>
-                                    <a href="./index.html">Projektrapport</a>
-                                </li>
-                                <li>
-                                    <a href="./index.html">About</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+    <!-- CSS -->
+    <!-- build:css styles/app.css -->
+    <link rel="stylesheet" href="components/bootstrap/docs/assets/css/bootstrap.css"/>
+    <link rel="stylesheet" href="styles/app.css"/>
+    <link rel="stylesheet" href="components/bootstrap/docs/assets/css/bootstrap-responsive.css"/>
+    <link rel="stylesheet" href="components/angular-grid/ng-grid.css"/>
+    <!-- endbuild -->
+
+    <!-- JavaScript -->
+    <!-- build:js scripts/scripts.js -->
+    <script src="components/jquery/jquery.js"></script>
+    <script src="components/bootstrap/docs/assets/js/bootstrap.js"></script>
+    <script src="components/angular/angular.js"></script>
+    <script src="components/angular-grid/build/ng-grid.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/CostList.js"></script>
+    <script src="scripts/controllers/CostDetail.js"></script>
+    <script src="scripts/controllers/CostNew.js"></script>
+    <!-- endbuild -->
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="#">Aufwandserfassung</a>
+
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li class="active">
+                            <a href="./index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="./index.html">Projektrapport</a>
+                        </li>
+                        <li>
+                            <a href="./index.html">About</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <!-- CONTENT -->
-            <div class="container" ng-controller="CostListCtrl">
-                <div class="well">
-                    <h2>Aufwände</h2>
-                    <p>
-                        Kann Aufwanderfassung Spass machen? So wohl kaum ;)
-                    </p>
-                    <p>
-                        <button class="btn btn-large btn-primary">Neuer Aufwand</button>
-                    </p>
-                </div>
-
-                <div>
-                    <div class="grid" ng-grid="gridOptions">
-                    </div>
-                </div>
-                <hr>
-                <footer>
-                    <p>© Lorenz Pfister & Georg Ludewig 2013</p>
-                </footer>
-            </div>
-    </body>
+        </div>
+    </div>
+    <!-- CONTENT -->
+    <div ng-view class="container">
+    </div>
+</body>
 </html>

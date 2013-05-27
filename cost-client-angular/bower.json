@@ -1,6 +1,6 @@
 {
-    "name": "workspaceWeb",
-    "version": "0.0.0",
+    "name": "cost-client-angular",
+    "version": "0.0.1",
     "dependencies": {
         "angular": "~1.0.7",
         "jquery": "~1.8.0",
