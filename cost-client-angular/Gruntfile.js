@@ -314,7 +314,7 @@ module.exports = function (grunt) {
     'usemin'
   ]);
 
-  grunt.registerTask('build', [
+  grunt.registerTask('build_with_test', [
     'clean:dist',
     'jshint',
     'test',
@@ -332,7 +332,7 @@ module.exports = function (grunt) {
     'usemin'
   ]);
 
-  grunt.registerTask('build2', [
+  grunt.registerTask('build', [
     'clean:dist',
     'jshint',
     'coffee',
