@@ -13,7 +13,7 @@ import com.unisys.ch.jax.costserver.model.Cost;
 @Service
 public class CostServiceInMemory implements CostService {
 
-    private Long lastId = 4L;
+    private Long DUMMY_COUNT = 15L;
     private TreeMap<Long, Cost> cachedToDos;
 
     public CostServiceInMemory() {
@@ -22,7 +22,7 @@ public class CostServiceInMemory implements CostService {
     }
 
     private void generateDummyEntities() {
-        for (long x = 1; x <= 15; x++) {
+        for (long x = 1; x <= DUMMY_COUNT; x++) {
             Cost todo = new Cost(x, "Todo" + x, "Todo" + x + " Description", Calendar.getInstance(), 8.0, Project.BAFU);
             cachedToDos.put(x, todo);
         }
@@ -38,7 +38,7 @@ public class CostServiceInMemory implements CostService {
 
     public Cost save(Cost todo) {
         if (todo.getId() == null) {
-            todo.setId(++lastId);
+            todo.setId(++DUMMY_COUNT);
         }
         return cachedToDos.put(todo.getId(), todo);
     }
