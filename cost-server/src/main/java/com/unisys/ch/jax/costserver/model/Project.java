@@ -8,5 +8,5 @@ package com.unisys.ch.jax.costserver.model;
  * To change this template use File | Settings | File Templates.
  */
 public enum Project {
-    BAFU
+	BAFU, BIT, EJPD, POST, UNISYS, VBS
 }
